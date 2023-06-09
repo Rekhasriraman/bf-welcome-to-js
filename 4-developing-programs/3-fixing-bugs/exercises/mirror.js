@@ -30,14 +30,15 @@
 
 */
 
+
 let text = null;
 while (text === null) {
-  text = prompt('enter some text, it will be mirrored');
+text = prompt('Enter some text. It will be mirrored.');
 }
 
 let mirrored = '|';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+mirrored = character + mirrored + character;
 }
 
 alert(mirrored);
