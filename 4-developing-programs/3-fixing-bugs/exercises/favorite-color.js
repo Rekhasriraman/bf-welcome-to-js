@@ -30,15 +30,23 @@
 
 */
 
-let message = 'you entered "';
-
-while (true) {
-  const input = prompt('enter something');
-
-  if (input === null && input.length === 0) {
-    message = input + '"';
-    break;
-  }
+let characters = null;
+while (characters === null) {
+characters = prompt('Enter some characters');
 }
 
-alert(message);
+const vowels = 'aeiouAEIOU';
+
+let hasAVowel = false;
+for (const char of characters) {
+if (vowels.includes(char)) {
+hasAVowel = true;
+break;
+}
+}
+
+if (hasAVowel) {
+alert('"' + characters + '" has at least one vowel');
+} else {
+alert('"' + characters + '" has no vowels');
+}

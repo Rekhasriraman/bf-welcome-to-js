@@ -35,3 +35,28 @@
       'Do dump'     ->  'DOGo dogump'
       'dim mooD'    -> 'dogim mooDOG'
 */
+
+
+/* --- gather user input --- */
+
+let userInput;
+do {
+  userInput = prompt('Please enter some text:');
+} while (userInput === null);
+
+/* --- replace "d"s with "dog" and "D"s with "DOG" --- */
+
+let dogifiedText = '';
+for (let i = 0; i < userInput.length; i++) {
+  if (userInput[i] === 'd') {
+    dogifiedText += 'dog';
+  } else if (userInput[i] === 'D') {
+    dogifiedText += 'DOG';
+  } else {
+    dogifiedText += userInput[i];
+  }
+}
+
+/* --- display the dogified text to the user --- */
+
+alert('Dogified text: ' + dogifiedText);

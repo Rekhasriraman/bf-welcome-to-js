@@ -36,9 +36,9 @@
 
   life cycle:
 
-  the mistake: { --> missing
+  the mistake: 
 
-  the fix(es): { --> added
+  the fix(es): 
 */
 
 for (let i = 0; i < 5; i++) {

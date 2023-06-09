@@ -22,7 +22,7 @@ while (!inputIsAboutAnimal) {
     continue;
   }
 
-  if (userInput.toLowerCase().includes(animal)) {
+  if (userInput === animal) {
     inputIsAboutAnimal = true;
     continue;
   }

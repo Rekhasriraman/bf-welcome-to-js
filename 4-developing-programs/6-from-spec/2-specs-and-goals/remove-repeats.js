@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* Remove Repeats
@@ -34,12 +32,29 @@
 
 /* --- gather user input --- */
 
-/* --- check if the input has any repeated characters --- */
+let userInput;
+do {
+  userInput = prompt('Please enter some text:');
+} while (userInput === null);
 
-//  store the string with no repeats for later
+/* --- remove repeated characters from the input --- */
+
+let noRepeats = '';
+for (let i = 0; i < userInput.length; i++) {
+  if (noRepeats.indexOf(userInput[i]) === -1) {
+    noRepeats += userInput[i];
+  }
+}
 
 /* --- create a message for the user --- */
 
-//  you can compare the input to the string without repeats
+let message;
+if (noRepeats === userInput) {
+  message = 'No repeats found. Input unchanged: ' + userInput;
+} else {
+  message = 'Repeats removed: "' + userInput + '" -> "' + noRepeats + '"';
+}
 
 /* --- display the message to the user --- */
+
+alert(message);

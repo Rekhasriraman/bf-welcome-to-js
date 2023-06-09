@@ -31,7 +31,6 @@
 
 
 */
-
 let characters = null;
 while (characters === null) {
   characters = prompt('enter some characters');
